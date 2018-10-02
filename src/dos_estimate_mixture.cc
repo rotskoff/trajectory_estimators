@@ -1,5 +1,5 @@
 /* dos_estimate_mixture.cc
- 
+
 Copyright 2018 Grant M. Rotskoff
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
   // usage
   if (argc != 5)
   {
-    fprintf(stderr,"usage ./run_gaussian_variance_calc dim gamma n_traj n_well\n");
+    fprintf(stderr,"usage ./run_mixture dim gamma n_traj n_well\n");
     exit(-1);
   }
   int dim = atoi(argv[1]);
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
   g.qmin = -1.;
   g.qmax = 1.;
   g.pmin = 0; // (NB: using mc reinjection)
-  g.pmax = 0; 
+  g.pmax = 0;
   g.mc_stepsize = 1e-2;
   g.beta = 5;
   bool use_mc = true;
